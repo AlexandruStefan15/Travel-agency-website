@@ -1,0 +1,35 @@
+@mixin animation(
+	$name,
+	$duration,
+	$timing: ease,
+	$delay: 0s,
+	$iteration_count: 1,
+	$direction: normal,
+	$fillmode: none,
+	$play_state: running
+) {
+	@keyframes #{$name} {
+		@content;
+	}
+	animation-name: $name;
+	animation-duration: $duration;
+	animation-timing-function: $timing;
+	animation-delay: $delay;
+	animation-iteration-count: $iteration_count;
+	animation-direction: $direction;
+	animation-fill-mode: $fillmode;
+	animation-play-state: $play_state;
+}
+
+.pulse {
+	@include animation(pulse, 1s, ease, 0s, infinite) {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+}
+
+/* animation (pulse 1s ease 0s infinite normal forwards paused)  */

@@ -1,0 +1,176 @@
+header {
+	position: fixed;
+	z-index: 999;
+	background: #f2f2f2;
+	width: 100%;
+	top: 0;
+	box-shadow: 0px 2px 12px #00000033;
+
+	nav {
+		min-height: 90px;
+		max-width: clamp(1670px, 87%, 100%);
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding-inline: 7em;
+
+		@include mobile {
+			min-height: 85px;
+		}
+
+		@include tablet {
+			padding-inline: 1.55em;
+		}
+
+		.nav-menu {
+			display: flex;
+			gap: 2.5em;
+			z-index: 9;
+			transition: max-height 1s ease;
+
+			&.active {
+				max-height: 427px;
+			}
+
+			@include tablet {
+				flex-direction: column;
+				position: absolute;
+				background: white;
+				width: 100%;
+				left: 0;
+				text-align: center;
+				top: 100%;
+				max-height: 0;
+				overflow: hidden;
+				gap: 0;
+				box-shadow: 0 6px 8px #00000070;
+			}
+
+			li {
+				position: relative;
+				margin-block: auto;
+
+				@include tablet {
+					border-top: 1px solid #0000001f;
+				}
+
+				&:last-of-type {
+					@include tablet {
+						padding-block: 1.4em;
+					}
+
+					a {
+						border-radius: 25px;
+						padding: 0.5em 1em;
+						background: var(--gradient);
+						color: white;
+						font-size: 1.05rem;
+
+						@include tablet {
+							padding: 0.7em 2em;
+							max-width: -webkit-fit-content;
+							max-width: -moz-fit-content;
+							max-width: fit-content;
+							margin: 0 auto;
+						}
+					}
+				}
+
+				a {
+					font-weight: 700;
+					color: var(--text3);
+					padding: 0.1em 0.15em;
+
+					@include tablet {
+						padding-block: 1.3em;
+						display: block;
+					}
+				}
+			}
+		}
+
+		.logo {
+			margin-top: -0.1em;
+
+			a {
+				display: flex;
+				align-items: center;
+				gap: 0.65em;
+
+				p {
+					font-weight: 800;
+					font-family: "Oswald", sans-serif;
+					font-size: 1.85rem;
+					color: var(--accent);
+
+					@include mobile {
+						font-size: 1.8rem;
+					}
+
+					span {
+						color: var(--text2);
+					}
+				}
+			}
+
+			svg {
+				width: 49px;
+
+				@include mobile {
+					width: 48px;
+				}
+			}
+		}
+
+		.hamburger-menu {
+			cursor: pointer;
+			display: none;
+			z-index: 10;
+
+			&.active {
+				span:first-of-type {
+					transform: rotate(-38deg);
+				}
+
+				span:last-of-type {
+					transform: rotate(38deg);
+				}
+
+				span:nth-of-type(2) {
+					opacity: 0;
+				}
+			}
+
+			@include tablet {
+				display: block;
+			}
+
+			span:first-of-type,
+			span:last-of-type {
+				transform-origin: right;
+			}
+
+			* {
+				display: block;
+				width: 26.5px;
+				height: 3px;
+				margin-block: 5px;
+				background-color: var(--accent);
+				border-radius: 5px;
+				transition: all 1s ease;
+			}
+
+			*.whiteBurger {
+				background-color: #dae2e1;
+			}
+
+			*.greenBurger {
+				background-color: #388878;
+				transition: background-color 1s ease, opacity 1.2s ease-in-out;
+				opacity: 1;
+			}
+		}
+	}
+}

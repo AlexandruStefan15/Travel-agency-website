@@ -1,0 +1,271 @@
+footer {
+	padding-top: 6.5em;
+	padding-bottom: 5.5em;
+	background: rgb(0 0 0 / 34%) url(/images/grandCanyon.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+	--mask: radial-gradient(55.9px at 50% 75px, #000 99%, #0000 101%) calc(50% - 50px) 0/100px 100%,
+		radial-gradient(55.9px at 50% -50px, #0000 99%, #000 101%) 50% 25px/100px 100% repeat-x;
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
+
+	@include mobile {
+		padding-top: 6em;
+		padding-bottom: 5em;
+	}
+
+	.container {
+		padding-inline: 2em;
+		max-width: 1400px;
+
+		.newsletter {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-inline: 1em;
+			gap: 2.5em;
+			flex-wrap: wrap;
+
+			@include tablet {
+				justify-content: center;
+			}
+
+			.text {
+				h1 {
+					color: white;
+					flex: 0 auto;
+					font-family: "Oswald", sans-serif;
+					font-size: 2.5rem;
+					text-shadow: 0 2px 4px #0000005c;
+				}
+
+				p {
+					color: white;
+					text-shadow: 0 2px 4px #0000005c;
+					font-size: 1.1rem;
+				}
+
+				@include mobile {
+					text-align: center;
+				}
+			}
+
+			.newsletter-form {
+				display: flex;
+				gap: 1em;
+				flex: 0 400px;
+				align-items: center;
+
+				input#email {
+					border: 1px solid white;
+					outline: none;
+					border-radius: 25px;
+					color: white;
+					flex: 1 278px;
+					padding-inline: 1em;
+					align-self: stretch;
+					background: rgba(255, 255, 255, 0.25);
+					-webkit-backdrop-filter: blur(4.4px);
+					backdrop-filter: blur(4.3px);
+					border: 1px solid rgba(255, 255, 255, 0.18);
+					width: 100%;
+					min-width: 150px;
+
+					&::-webkit-input-placeholder {
+						color: white;
+					}
+
+					&::-moz-placeholder {
+						color: white;
+					}
+
+					&:-ms-input-placeholder {
+						color: white;
+					}
+
+					&::-ms-input-placeholder {
+						color: white;
+					}
+
+					&::placeholder {
+						color: white;
+					}
+				}
+
+				button {
+					display: flex;
+					align-items: center;
+					gap: 0.5em;
+					border-radius: 25px;
+					padding: 0.45em 1.2em;
+					background: var(--gradient);
+					color: white;
+					border: none;
+					flex: 0 108px;
+					cursor: pointer;
+					font-size: 0.95rem;
+
+					svg {
+						fill: white;
+						vertical-align: sub;
+						width: 16px;
+					}
+				}
+			}
+		}
+
+		.info-wrapper {
+			background: #f5f5f5db;
+			box-shadow: 1px 1px 24px -3px rgba(0, 0, 0, 0.75);
+			padding: 2em 2.5em;
+			border-radius: 12px;
+			margin-top: 3.5em;
+			display: flex;
+			gap: 3em;
+			justify-content: space-between;
+
+			@include tablet {
+				max-width: 850px;
+				margin-inline: auto;
+				flex-wrap: wrap;
+			}
+
+			@include mobile {
+				row-gap: 2em;
+			}
+
+			.footer-about {
+				flex: 0 600px;
+				display: flex;
+				flex-direction: column;
+				gap: 1.5em;
+
+				@include tablet {
+					flex: 1 600px;
+				}
+
+				a {
+					display: flex;
+					align-items: center;
+					gap: 1em;
+					width: -webkit-fit-content;
+					width: -moz-fit-content;
+					width: fit-content;
+
+					@include mobile {
+						margin: 0 auto;
+					}
+
+					svg {
+						width: 50px;
+					}
+					p {
+						font-family: "Oswald", sans-serif;
+						font-size: 1.6rem;
+						font-weight: bold;
+						color: var(--accent);
+
+						span {
+							color: var(--text2);
+						}
+					}
+				}
+
+				p {
+					text-align: justify;
+				}
+
+				.social-media {
+					display: flex;
+					gap: 0.85em;
+
+					a {
+						width: 25px;
+						@include mobile {
+							margin: initial;
+						}
+					}
+				}
+			}
+
+			.footer-navigation {
+				display: flex;
+				flex: 0 580px;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 2em;
+
+				@include mobile {
+					row-gap: 0;
+				}
+
+				.col {
+					flex: 1 max-content;
+
+					@include mobile {
+						border-bottom: 1px solid;
+						margin-bottom: 0.5em;
+						flex: 1 100%;
+					}
+
+					&:has(ul.visible) {
+						i {
+							transform: rotate3d(1, 0, 0, 180deg);
+						}
+					}
+
+					h2 {
+						margin-bottom: 0.5em;
+						@include mobile {
+							display: flex;
+							justify-content: space-between;
+							cursor: pointer;
+							padding-block: 3px;
+							text-indent: 4px;
+							font-size: 1.4rem;
+							margin-bottom: 0;
+						}
+
+						i {
+							display: none;
+							font-weight: 100;
+							transition: all 0.5s linear;
+
+							@include mobile {
+								display: initial;
+							}
+						}
+					}
+				}
+
+				@include tablet {
+					justify-content: flex-start;
+					-moz-column-gap: 3em;
+					column-gap: 3em;
+				}
+
+				ul {
+					li {
+						margin-block: 0.5em;
+					}
+
+					@include mobile {
+						max-height: 0px;
+						overflow: hidden;
+						margin-bottom: 0.5em;
+						transition: all 0.5s ease;
+						padding-left: 0.3em;
+					}
+
+					&.visible {
+						max-height: 201px;
+					}
+				}
+			}
+		}
+	}
+}
