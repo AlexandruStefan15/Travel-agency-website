@@ -912,7 +912,7 @@ main .container .sidebar form {
   display: flex;
   flex-direction: column;
   padding: 2em 1.5em;
-  background-color: rgba(237, 237, 237, 0.9294117647);
+  background-color: rgba(229, 232, 235, 0.67);
   border: 3px solid rgba(128, 128, 128, 0.2901960784);
   gap: 1em;
   border-radius: 8px;
@@ -980,6 +980,8 @@ main .container .sidebar form textarea {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
   background: rgba(240, 246, 250, 0.8784313725);
   border: 1px solid rgba(0, 0, 0, 0.2705882353);
+  text-indent: 0;
+  padding-left: 1em;
 }
 main .container .sidebar form textarea:focus {
   outline: none;
