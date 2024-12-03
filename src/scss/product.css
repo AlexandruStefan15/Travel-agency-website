@@ -633,6 +633,13 @@ main .container .info-circuit li {
   gap: 0.6em;
   padding-top: 0.35em;
 }
+main .container .info-circuit li.days svg {
+  position: relative;
+  top: -1px;
+}
+main .container .info-circuit li.escala svg {
+  transform: scale(1.5) rotate(25deg);
+}
 main .container .info-circuit li svg {
   fill: var(--accent);
   transform: scale(1.49);
@@ -644,10 +651,6 @@ main .container .info-circuit li p {
   color: rgba(68, 68, 68, 0.9490196078);
   font-family: "univers next pro", Arial, sans-serif;
   font-size: 1.06rem;
-}
-main .container .info-circuit li.days svg {
-  position: relative;
-  top: -1px;
 }
 main .container .main-col {
   grid-column: 1/span 1;

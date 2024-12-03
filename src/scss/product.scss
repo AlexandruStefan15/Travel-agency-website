@@ -132,6 +132,19 @@ main {
 				gap: 0.6em;
 				padding-top: 0.35em;
 
+				&.days {
+					svg {
+						position: relative;
+						top: -1px;
+					}
+				}
+
+				&.escala {
+					svg {
+						transform: scale(1.5) rotate(25deg);
+					}
+				}
+
 				svg {
 					fill: var(--accent);
 					transform: scale(1.49);
@@ -145,13 +158,6 @@ main {
 					color: #444444f2;
 					font-family: "univers next pro", Arial, sans-serif;
 					font-size: 1.06rem;
-				}
-
-				&.days {
-					svg {
-						position: relative;
-						top: -1px;
-					}
 				}
 			}
 		}
