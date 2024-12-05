@@ -916,7 +916,7 @@ main .container .sidebar form {
   flex-direction: column;
   padding: 2em 1.5em;
   background-color: rgba(229, 232, 235, 0.6);
-  border: 7px solid #6993a3;
+  border: 5px solid #6993a3;
   gap: 1em;
   border-radius: 9px;
   position: sticky;

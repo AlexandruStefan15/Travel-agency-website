@@ -17,24 +17,34 @@ function insertData() {
 	let backgroundImage = (document.querySelector(
 		"main .banner"
 	).style.backgroundImage = `url(${product.main_image})`);
+
 	let title = (document.querySelector(
 		"main .banner .title h1"
 	).textContent = `Calatorie spre ${product.location}`);
+
 	let subtitle = (document.querySelector("main .banner .title h2").childNodes[2].textContent =
 		product.country);
+
 	let info = document.querySelectorAll("main .container .info-circuit li p");
+
 	info[0].textContent = `${product.price} EURO`;
 	info[1].textContent = product.date_departure;
 	info[2].textContent = product.date_arrival;
-	info[3].textContent = `${product.days} zile`;
-	info[4].textContent = product.airport;
+	info[3].textContent =
+		product.escale == 1 ? `${product.escale} Escala` : `${product.escale} Escale`;
+	info[4].textContent = `${product.days} zile`;
+	info[5].textContent = product.airport;
+
 	let description = (document.querySelector(
 		"main .container .main-col .product-description p"
 	).textContent = product.description);
+
 	let objectives = (document.querySelector(
 		"main .container .main-col .objectives ul"
 	).innerHTML = `${product.objectives.map((obj) => `<li>${obj}</li>`).join("")}`);
+
 	let schedule = document.querySelector("main .container .main-col .schedule ul");
+
 	let dates = getDatesInRange(
 		new Date(product.date_departure.split(".").reverse().join(".")),
 		new Date(product.date_arrival.split(".").reverse().join("."))

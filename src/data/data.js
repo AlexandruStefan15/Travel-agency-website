@@ -11,6 +11,7 @@ export default {
 			date_departure: "23.12.2022",
 			date_arrival: "29.12.2022",
 			days: 7,
+			escale: 1,
 			airport: "Bucuresti",
 			images: [
 				"/images/pahang/pahang1.jpg",
