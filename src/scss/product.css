@@ -915,15 +915,12 @@ main .container .sidebar form {
   display: flex;
   flex-direction: column;
   padding: 2em 1.5em;
-  background-color: rgba(229, 232, 235, 0.67);
-  border: 3px solid rgba(128, 128, 128, 0.2901960784);
+  background-color: rgba(229, 232, 235, 0.6);
+  border: 7px solid #6993a3;
   gap: 1em;
-  border-radius: 8px;
+  border-radius: 9px;
   position: sticky;
   top: 8em;
-  box-shadow: 5px -5px 2px 4px rgba(47, 106, 127, 0.7215686275);
-  border-right: none;
-  border-top: none;
 }
 @media all and (max-width: 1279.5px) {
   main .container .sidebar form {
@@ -991,24 +988,41 @@ main .container .sidebar form textarea:focus {
 }
 main .container .sidebar form .form-group {
   display: flex;
-  gap: 0.5em;
+  gap: 0.75em;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+@media all and (max-width: 500px) {
+  main .container .sidebar form .form-group {
+    gap: 1em;
+    margin-top: 0.1em;
+  }
 }
 main .container .sidebar form .form-group button {
   flex: 1 155px;
   border: none;
   border-radius: 5px;
-  background: var(--gradient);
+  background: var(--accent);
   color: white;
   cursor: pointer;
   padding-block: 0.8em;
+}
+@media all and (max-width: 500px) {
+  main .container .sidebar form .form-group button {
+    padding-block: 1.1em;
+  }
 }
 main .container .sidebar form .form-group a {
   flex: 1 155px;
   text-align: center;
   padding: 0.6em;
-  border: 2px solid var(--primary);
+  background: var(--gradient);
   border-radius: 5px;
-  color: var(--primary);
+  color: white;
+}
+@media all and (max-width: 500px) {
+  main .container .sidebar form .form-group a {
+    padding-block: 1.1em;
+    line-height: 18.4px;
+  }
 }/*# sourceMappingURL=product.css.map */
