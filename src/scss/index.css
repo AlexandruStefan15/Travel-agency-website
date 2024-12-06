@@ -260,9 +260,9 @@ header nav .hamburger-menu *.greenBurger {
 }
 
 footer {
-  padding-top: 6.5em;
+  padding-top: 6.8em;
   padding-bottom: 5.5em;
-  background: rgba(0, 0, 0, 0.34) url(/images/grandCanyon.jpg);
+  background: var(--accent);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -272,6 +272,11 @@ footer {
   	radial-gradient(55.9px at 50% -50px, #0000 99%, #000 101%) 50% 25px/100px 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
+}
+@media all and (max-width: 1279.5px) {
+  footer {
+    background: var(--accent);
+  }
 }
 @media all and (max-width: 500px) {
   footer {
@@ -300,13 +305,13 @@ footer .container .newsletter .text h1 {
   color: white;
   flex: 0 auto;
   font-family: "Oswald", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3607843137);
 }
 footer .container .newsletter .text p {
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3607843137);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 @media all and (max-width: 500px) {
   footer .container .newsletter .text {
@@ -320,6 +325,7 @@ footer .container .newsletter .newsletter-form {
   align-items: center;
 }
 footer .container .newsletter .newsletter-form input#email {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border: 1px solid white;
   outline: none;
   border-radius: 25px;
@@ -352,6 +358,7 @@ footer .container .newsletter .newsletter-form button {
   flex: 0 108px;
   cursor: pointer;
   font-size: 0.95rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 footer .container .newsletter .newsletter-form button svg {
   fill: white;
@@ -904,7 +911,7 @@ main section.products .container .product-list {
 }
 @media all and (max-width: 500px) {
   main section.products .container .product-list {
-    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 main section.products .container .product-list:has(> *:first-child:nth-last-child(2)) {

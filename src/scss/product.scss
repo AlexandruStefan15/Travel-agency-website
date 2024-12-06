@@ -112,9 +112,10 @@ main {
 			row-gap: 2.5em;
 
 			@include tablet {
+				margin-top: 1em;
 				justify-content: center;
 				flex-wrap: wrap;
-				margin: 0 auto;
+				margin-inline: auto;
 			}
 
 			@include tablet_sm {
@@ -123,7 +124,7 @@ main {
 
 			@include mobile {
 				gap: 3em 1.5em;
-				grid-template-columns: repeat(3, minmax(75px, 1fr));
+				grid-template-columns: repeat(3, minmax(75px, 108px));
 				display: grid;
 			}
 
@@ -145,6 +146,10 @@ main {
 					svg {
 						transform: scale(1.5) rotate(25deg);
 					}
+				}
+
+				@include tablet {
+					transform: scale(1.06);
 				}
 
 				svg {

@@ -1,7 +1,7 @@
 footer {
-	padding-top: 6.5em;
+	padding-top: 6.8em;
 	padding-bottom: 5.5em;
-	background: rgb(0 0 0 / 34%) url(/images/grandCanyon.jpg);
+	background: var(--accent);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -11,6 +11,10 @@ footer {
 		radial-gradient(55.9px at 50% -50px, #0000 99%, #000 101%) 50% 25px/100px 100% repeat-x;
 	-webkit-mask: var(--mask);
 	mask: var(--mask);
+
+	@include tablet {
+		background: var(--accent);
+	}
 
 	@include mobile {
 		padding-top: 6em;
@@ -38,14 +42,14 @@ footer {
 					color: white;
 					flex: 0 auto;
 					font-family: "Oswald", sans-serif;
-					font-size: 2.5rem;
+					font-size: 2.8rem;
 					text-shadow: 0 2px 4px #0000005c;
 				}
 
 				p {
 					color: white;
 					text-shadow: 0 2px 4px #0000005c;
-					font-size: 1.1rem;
+					font-size: 1.3rem;
 				}
 
 				@include mobile {
@@ -60,6 +64,7 @@ footer {
 				align-items: center;
 
 				input#email {
+					box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 					border: 1px solid white;
 					outline: none;
 					border-radius: 25px;
@@ -107,6 +112,7 @@ footer {
 					flex: 0 108px;
 					cursor: pointer;
 					font-size: 0.95rem;
+					box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
 					svg {
 						fill: white;
