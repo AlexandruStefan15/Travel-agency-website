@@ -1,8 +1,5 @@
 import data from "../data/data.js";
 
-var coordX = 0;
-var coordY = 0;
-
 function getProduct() {
 	let para = new URLSearchParams(window.location.search);
 	let id = para.get("product_id");
@@ -31,7 +28,7 @@ function insertData() {
 	info[1].textContent = product.date_departure;
 	info[2].textContent = product.date_arrival;
 	info[3].textContent =
-		product.escale == 1 ? `${product.escale} Escala` : `${product.escale} Escale`;
+		product.stop_overs == 1 ? `${product.stop_overs} Escala` : `${product.stop_overs} Escale`;
 	info[4].textContent = `${product.days} zile`;
 	info[5].textContent = product.airport;
 

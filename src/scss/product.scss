@@ -122,7 +122,9 @@ main {
 			}
 
 			@include mobile {
-				gap: 3em;
+				gap: 3em 1.5em;
+				grid-template-columns: repeat(3, minmax(75px, 1fr));
+				display: grid;
 			}
 
 			li {

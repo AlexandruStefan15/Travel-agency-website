@@ -623,7 +623,9 @@ main .container .info-circuit {
 }
 @media all and (max-width: 500px) {
   main .container .info-circuit {
-    gap: 3em;
+    gap: 3em 1.5em;
+    grid-template-columns: repeat(3, minmax(75px, 1fr));
+    display: grid;
   }
 }
 main .container .info-circuit li {

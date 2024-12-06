@@ -11,7 +11,7 @@ export default {
 			date_departure: "23.12.2022",
 			date_arrival: "29.12.2022",
 			days: 7,
-			escale: 1,
+			stop_overs: 2,
 			airport: "Bucuresti",
 			images: [
 				"/images/pahang/pahang1.jpg",
@@ -42,6 +42,7 @@ export default {
 			date_departure: "05.06.2023",
 			date_arrival: "10.06.2023",
 			days: 6,
+			stop_overs: 1,
 			airport: "Cluj Napoca",
 			images: [
 				"/images/cairo/cairo1.jpg",
@@ -72,6 +73,7 @@ export default {
 			date_departure: "28.02.2023",
 			date_arrival: "07.03.2023",
 			days: 8,
+			stop_overs: 1,
 			airport: "Cluj Napoca",
 			images: [
 				"/images/borabora/borabora1.jpg",
@@ -103,6 +105,7 @@ export default {
 			date_departure: "20.03.2023",
 			date_arrival: "25.03.2023",
 			days: 6,
+			stop_overs: 0,
 			airport: "Bucuresti",
 			images: [
 				"/images/dakar/dakar1.jpg",
@@ -133,6 +136,7 @@ export default {
 			date_departure: "04.01.2023",
 			date_arrival: "10.01.2023",
 			days: 7,
+			stop_overs: 1,
 			airport: "Bucuresti",
 			images: [
 				"/images/bogota/bogota1.jpg",
@@ -164,6 +168,7 @@ export default {
 			date_departure: "07.08.2023",
 			date_arrival: "13.08.2023",
 			days: 7,
+			stop_overs: 3,
 			airport: "Cluj Napoca",
 			images: [
 				"/images/auckland/auckland1.jpg",
@@ -195,6 +200,7 @@ export default {
 			date_departure: "14.10.2023",
 			date_arrival: "19.10.2023",
 			days: 6,
+			stop_overs: 2,
 			airport: "Bucuresti",
 			images: [
 				"/images/baobab/baobab1.jpg",
@@ -225,6 +231,7 @@ export default {
 			date_departure: "07.05.2023",
 			date_arrival: "13.05.2023",
 			days: 7,
+			stop_overs: 2,
 			airport: "Cluj Napoca",
 			images: [
 				"/images/machuPicchu/machuPicchu1.jpg",
@@ -255,6 +262,7 @@ export default {
 			date_departure: "12.09.2023",
 			date_arrival: "18.09.2023",
 			days: 7,
+			stop_overs: 0,
 			airport: "Targu Mures",
 			images: [
 				"/images/fuerteventura/fuerteventura1.jpg",
@@ -285,6 +293,7 @@ export default {
 			date_departure: "23.12.2022",
 			date_arrival: "29.12.2022",
 			days: 7,
+			stop_overs: 0,
 			airport: "Bucuresti",
 			images: [
 				"/images/budapesta/budapesta1.jpg",
@@ -316,6 +325,7 @@ export default {
 			date_departure: "05.06.2023",
 			date_arrival: "10.06.2023",
 			days: 6,
+			stop_overs: 0,
 			airport: "Cluj Napoca",
 			images: [
 				"/images/reykjavik/reykjavik1.jpg",
@@ -347,6 +357,7 @@ export default {
 			date_departure: "28.02.2023",
 			date_arrival: "07.03.2023",
 			days: 8,
+			stop_overs: 0,
 			airport: "Cluj Napoca",
 			images: [
 				"/images/madeira/madeira1.jpg",
@@ -378,6 +389,7 @@ export default {
 			date_departure: "04.01.2023",
 			date_arrival: "10.01.2023",
 			days: 7,
+			stop_overs: 2,
 			airport: "Targu Mures",
 			images: [
 				"/images/kyoto/kyoto1.jpg",
@@ -409,6 +421,7 @@ export default {
 			date_departure: "07.08.2023",
 			date_arrival: "13.08.2023",
 			days: 7,
+			stop_overs: 0,
 			airport: "Cluj Napoca",
 			images: [
 				"/images/stockholm/stockholm1.webp",
@@ -440,6 +453,7 @@ export default {
 			date_departure: "14.10.2023",
 			date_arrival: "20.10.2023",
 			days: 7,
+			stop_overs: 2,
 			airport: "Bucuresti",
 			images: [
 				"/images/seoul/seoul1.jpg",
@@ -471,6 +485,7 @@ export default {
 			date_departure: "07.05.2023",
 			date_arrival: "13.05.2023",
 			days: 7,
+			stop_overs: 1,
 			airport: "Bucuresti",
 			images: [
 				"/images/hochiminh/hochiminh1.jpg",
@@ -502,6 +517,7 @@ export default {
 			date_departure: "14.10.2023",
 			date_arrival: "19.10.2023",
 			days: 6,
+			stop_overs: 2,
 			airport: "Cluj Napoca",
 			images: [
 				"/images/boracay/boracay1.jpg",
@@ -533,6 +549,7 @@ export default {
 			date_departure: "14.10.2023",
 			date_arrival: "20.10.2023",
 			days: 7,
+			stop_overs: 1,
 			airport: "Targu Mures",
 			images: [
 				"/images/delhi/delhi1.jpg",
