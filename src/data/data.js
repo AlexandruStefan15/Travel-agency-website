@@ -114,7 +114,7 @@ export default {
 				"/images/dakar/dakar4.jpg",
 				"/images/dakar/dakar2.jpg",
 			],
-			main_image: "/images/dakar/dakar6.jpg",
+			main_image: "/images/dakar/dakarBanner.jpg",
 			objectives: [
 				"Lorem ipsum dolor sit amet, consectetur adipiscing.",
 				"Lorem ipsum dolor sit amet, consectetur adipiscing.",
