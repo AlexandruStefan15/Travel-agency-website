@@ -526,13 +526,13 @@ main #videoPlayer {
     display: none;
   }
 }
-main .fullscreen-banner {
+main section.fullscreen-banner {
   position: relative;
   height: calc(100vh - 90px);
   padding: 0;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
-main .fullscreen-banner::after {
+main section.fullscreen-banner::after {
   content: "";
   top: 0;
   left: 0;
@@ -543,21 +543,20 @@ main .fullscreen-banner::after {
   mix-blend-mode: multiply;
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner::after {
+  main section.fullscreen-banner::after {
     background: unset;
   }
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner {
-    margin-top: 85px;
-    height: calc(100vh - 50px);
+  main section.fullscreen-banner {
+    height: 100vh;
     background-image: url(/images/palm.jpg);
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
   }
 }
-main .fullscreen-banner .info-banner {
+main section.fullscreen-banner .info-banner {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -567,18 +566,18 @@ main .fullscreen-banner .info-banner {
   max-width: 985px;
 }
 @media all and (max-width: 1279.5px) {
-  main .fullscreen-banner .info-banner {
+  main section.fullscreen-banner .info-banner {
     width: 80%;
     max-width: none;
   }
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner {
+  main section.fullscreen-banner .info-banner {
     width: 93%;
     transform: translate(-50%, -52%);
   }
 }
-main .fullscreen-banner .info-banner h1 {
+main section.fullscreen-banner .info-banner h1 {
   margin-bottom: 0.9em;
   color: white;
   font-size: 2.6rem;
@@ -586,68 +585,49 @@ main .fullscreen-banner .info-banner h1 {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
 }
 @media all and (max-width: 1279.5px) {
-  main .fullscreen-banner .info-banner h1 {
+  main section.fullscreen-banner .info-banner h1 {
     font-size: 2.5rem;
   }
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner h1 {
+  main section.fullscreen-banner .info-banner h1 {
     font-size: 2rem;
   }
 }
-main .fullscreen-banner .info-banner h1 span {
+main section.fullscreen-banner .info-banner h1 span {
   text-decoration: underline;
   text-decoration-color: var(--secondary);
 }
-main .fullscreen-banner .info-banner form {
-  padding: 1.7em 2.5em;
-  border-radius: 15px;
+main section.fullscreen-banner .info-banner form {
+  padding: 2em 2.5em;
+  border-radius: 10px;
   display: grid;
-  row-gap: 1.5em;
-  -moz-column-gap: 2.5em;
-  column-gap: 2.5em;
+  gap: 2em 2.75em;
   grid-template-columns: 1fr 1fr;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.3411764706);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 @media all and (max-width: 768px) {
-  main .fullscreen-banner .info-banner form {
+  main section.fullscreen-banner .info-banner form {
     grid-template-columns: 1fr;
-    padding-inline: 1.5em;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    padding-inline: 1.7em;
+    padding-block: 2em;
   }
 }
-main .fullscreen-banner .info-banner form .form-item label {
-  display: block;
-  margin-bottom: 0.75em;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3607843137);
-}
-main .fullscreen-banner .info-banner form .form-item input {
-  width: 100%;
-  border-radius: 25px;
-  padding: 0.5em;
-  outline: none;
-  border-color: transparent;
-  background: #efefef;
-}
-@media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form .form-item input {
-    padding-block: 0.85em;
-    line-height: normal;
-  }
-}
-main .fullscreen-banner .info-banner form .form-item:nth-of-type(2) input, main .fullscreen-banner .info-banner form .form-item:nth-of-type(3) input {
+main section.fullscreen-banner .info-banner form .form-item:nth-of-type(2) input, main section.fullscreen-banner .info-banner form .form-item:nth-of-type(3) input {
   cursor: text;
 }
-main .fullscreen-banner .info-banner form .form-item:nth-of-type(2) input::-webkit-calendar-picker-indicator, main .fullscreen-banner .info-banner form .form-item:nth-of-type(3) input::-webkit-calendar-picker-indicator {
+main section.fullscreen-banner .info-banner form .form-item:nth-of-type(2) input::-webkit-calendar-picker-indicator, main section.fullscreen-banner .info-banner form .form-item:nth-of-type(3) input::-webkit-calendar-picker-indicator {
   cursor: pointer;
   padding-right: 0.5em;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -656,36 +636,36 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type {
   grid-row: 1/span 1;
 }
 @media all and (max-width: 768px) {
-  main .fullscreen-banner .info-banner form .form-item:last-of-type {
+  main section.fullscreen-banner .info-banner form .form-item:last-of-type {
     grid-column: 1/2;
     grid-row: 2/span 1;
   }
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type label span:first-of-type {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type label span:first-of-type {
   display: none;
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form .form-item:last-of-type label span:first-of-type {
+  main section.fullscreen-banner .info-banner form .form-item:last-of-type label span:first-of-type {
     display: initial;
   }
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form .form-item:last-of-type label span:last-of-type {
+  main section.fullscreen-banner .info-banner form .form-item:last-of-type label span:last-of-type {
     display: none;
   }
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider {
   display: flex;
   width: 100%;
   gap: 0.6em;
   align-items: center;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price {
   display: flex;
   gap: 0.5em;
   align-items: center;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price input.min_value {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price input.min_value {
   border: 1px solid rgba(255, 255, 255, 0.8509803922);
   border-radius: 4px;
   max-width: 75px;
@@ -697,20 +677,20 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider 
   appearance: textfield;
   cursor: auto;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price input.min_value::-webkit-inner-spin-button {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price input.min_value::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
   display: none;
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price input.min_value {
+  main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price input.min_value {
     min-width: 55px;
     text-align: center;
     padding-block: 0.4em;
     font-size: 0.9rem;
   }
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price span {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price span {
   position: relative;
   top: 1px;
   color: white;
@@ -718,16 +698,16 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider 
   font-size: 1.07rem;
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price span {
+  main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .min-price span {
     display: none;
   }
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price {
   display: flex;
   gap: 0.5em;
   align-items: center;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price input.max_value {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price input.max_value {
   border: 1px solid rgba(255, 255, 255, 0.8509803922);
   border-radius: 4px;
   max-width: 75px;
@@ -739,20 +719,20 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider 
   appearance: textfield;
   cursor: auto;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price input.max_value::-webkit-inner-spin-button {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price input.max_value::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
   display: none;
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price input.max_value {
+  main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price input.max_value {
     min-width: 55px;
     text-align: center;
     padding-block: 0.4em;
     font-size: 0.9rem;
   }
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price span {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price span {
   position: relative;
   top: 1px;
   color: white;
@@ -760,11 +740,11 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider 
   font-size: 1.07rem;
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price span {
+  main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .max-price span {
     display: none;
   }
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider {
   width: 100%;
   height: 5px;
   background-color: rgba(255, 255, 255, 0.431372549);
@@ -774,7 +754,7 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider 
   position: relative;
   border-radius: 25px;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider .progress {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider .progress {
   left: 0%;
   right: 0%;
   height: 100%;
@@ -782,7 +762,7 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider 
   border-radius: 50px;
   position: absolute;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input {
   padding: 0;
   height: -moz-fit-content;
   height: fit-content;
@@ -797,13 +777,13 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider 
   background: none;
   outline: none;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input:first-of-type {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input:first-of-type {
   left: 0;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input:last-of-type {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input:last-of-type {
   right: 0;
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input::-webkit-slider-thumb {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input::-webkit-slider-thumb {
   -webkit-appearance: none;
   pointer-events: auto;
   appearance: none;
@@ -813,14 +793,14 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider 
   border-radius: 25px;
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input::-webkit-slider-thumb {
+  main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input::-webkit-slider-thumb {
     width: 17px;
     height: 17px;
     position: relative;
     top: -0.5px;
   }
 }
-main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input::-moz-range-thumb {
+main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input::-moz-range-thumb {
   pointer-events: auto;
   -moz-appearance: none;
   appearance: none;
@@ -832,13 +812,36 @@ main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider 
   transform: translatey(-0.1px);
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input::-moz-range-thumb {
+  main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input::-moz-range-thumb {
     transform: translatey(-1px);
     width: 15.5px;
     height: 15.5px;
   }
 }
-main .fullscreen-banner .info-banner form button {
+main section.fullscreen-banner .info-banner form .form-item label {
+  display: block;
+  margin-bottom: 0.75em;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3607843137);
+}
+main section.fullscreen-banner .info-banner form .form-item input {
+  width: 100%;
+  border-radius: 25px;
+  padding: 0.5em;
+  outline: none;
+  border-color: transparent;
+  background: #efefef;
+}
+@media all and (max-width: 500px) {
+  main section.fullscreen-banner .info-banner form .form-item input {
+    padding-block: 0.85em;
+    line-height: normal;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+main section.fullscreen-banner .info-banner form button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -856,7 +859,7 @@ main .fullscreen-banner .info-banner form button {
   line-height: 1.5;
 }
 @media all and (max-width: 500px) {
-  main .fullscreen-banner .info-banner form button {
+  main section.fullscreen-banner .info-banner form button {
     width: 45%;
     margin: 0 auto;
     padding-block: 0.75em;
@@ -864,7 +867,7 @@ main .fullscreen-banner .info-banner form button {
     margin-block: 0.2em;
   }
 }
-main .fullscreen-banner .scroll-pointer {
+main section.fullscreen-banner .scroll-pointer {
   position: absolute;
   top: 94%;
 }
