@@ -971,7 +971,7 @@ main .container .sidebar form input {
   border: 1px solid rgba(0, 0, 0, 0.2705882353);
   border-radius: 5px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
-  background: rgba(240, 246, 250, 0.8784313725);
+  background: white;
 }
 main .container .sidebar form input:focus {
   outline: none;
@@ -994,7 +994,7 @@ main .container .sidebar form textarea {
   resize: vertical;
   min-height: 50px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
-  background: rgba(240, 246, 250, 0.8784313725);
+  background: white;
   border: 1px solid rgba(0, 0, 0, 0.2705882353);
   text-indent: 0;
   padding-left: 1em;
