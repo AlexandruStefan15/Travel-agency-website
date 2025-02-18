@@ -8,11 +8,6 @@ A simple website where you can search your favorite destination among a few and 
 
 ![Overview photo1](src/design/photo1.png)
 
-<style>
 
- p{
-  color:red;
- }
-</style>
 
  
