@@ -9,11 +9,7 @@
 :root {
   --primary: hsl(199, 100%, 33%);
   --secondary: hsl(187, 85%, 43%);
-  --gradient: linear-gradient(
-  	to right,
-  	hsl(187, 85%, 43%),
-  	hsl(199, 100%, 33%)
-  );
+  --gradient: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
   --accent: rgb(47, 106, 127);
   --text: rgb(118 117 117);
   --text2: #252d39;
@@ -848,7 +844,7 @@ main section.fullscreen-banner .info-banner form button {
   appearance: none;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 0.3em 2.1em;
+  padding: 0.3em 2.2em;
   cursor: pointer;
   border-radius: 5.5px;
   background: var(--secondary);

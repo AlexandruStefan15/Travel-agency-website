@@ -1,3 +1,5 @@
+import { getRandomDateInCurrentYear, addDaysToDate } from "./utils.js";
+
 export default {
 	products: [
 		{
@@ -8,8 +10,8 @@ export default {
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 			price: 700,
 			is_available: true,
-			date_departure: "23.12.2022",
-			date_arrival: "29.12.2022",
+			date_departure: "23.12.2025",
+			date_arrival: "29.12.2025",
 			days: 7,
 			stop_overs: 2,
 			airport: "Bucuresti",
