@@ -8,11 +8,7 @@
 :root {
 	--primary: hsl(199, 100%, 33%);
 	--secondary: hsl(187, 85%, 43%);
-	--gradient: linear-gradient(
-		to right,
-		hsl(187, 85%, 43%),
-		hsl(199, 100%, 33%)
-	);
+	--gradient: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
 	--accent: rgb(47, 106, 127);
 	--text: rgb(118 117 117);
 	--text2: #252d39;
