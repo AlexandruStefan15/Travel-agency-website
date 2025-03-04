@@ -5,29 +5,30 @@ export function getRandomDateInCurrentYear() {
 	let randomTimestamp = start.getTime() + Math.random() * (end.getTime() - start.getTime());
 	let randomDate = new Date(randomTimestamp);
 
-	// Format YYYY.MM.DD
+	// Format DD.MM.YYYY
 	let formattedDate =
-		randomDate.getFullYear() +
+		String(randomDate.getDate()).padStart(2, "0") +
 		"." +
 		String(randomDate.getMonth() + 1).padStart(2, "0") +
 		"." +
-		String(randomDate.getDate()).padStart(2, "0");
+		randomDate.getFullYear();
 
 	return formattedDate;
 }
 
 export function addDaysToDate(dateStr, days) {
-	let [year, month, day] = dateStr.split(".").map(Number);
+	let [day, month, year] = dateStr.split(".").map(Number);
 	let date = new Date(year, month - 1, day); // month is zero-based in JS
 
 	date.setDate(date.getDate() + days);
 
+	// Format DD.MM.YYYY
 	let formattedDate =
-		date.getFullYear() +
+		String(date.getDate()).padStart(2, "0") +
 		"." +
 		String(date.getMonth() + 1).padStart(2, "0") +
 		"." +
-		String(date.getDate()).padStart(2, "0");
+		date.getFullYear();
 
 	return formattedDate;
 }
