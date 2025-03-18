@@ -13,6 +13,7 @@ npm install
 ```sh
 npm start
 ```
+<br>
 
 ![Overview photo1](src/design/photo1.png)
 
