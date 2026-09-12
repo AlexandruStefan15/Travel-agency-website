@@ -72,6 +72,14 @@ section {
   }
 }
 /* boilerplate-end */
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .pulse {
   animation-name: pulse;
   animation-duration: 1s;
@@ -81,14 +89,6 @@ section {
   animation-direction: normal;
   animation-fill-mode: none;
   animation-play-state: running;
-}
-@keyframes pulse {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }
 
 /* animation (pulse 1s ease 0s infinite normal forwards paused)  */
@@ -168,6 +168,7 @@ header nav .nav-menu li:last-of-type a {
 @media all and (max-width: 1279.5px) {
   header nav .nav-menu li:last-of-type a {
     padding: 0.7em 2em;
+    max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin: 0 auto;
@@ -264,7 +265,9 @@ footer {
   background-position: center;
   background-blend-mode: overlay;
   background-attachment: fixed;
-  --mask: radial-gradient(55.9px at 50% 75px, #000 99%, #0000 101%) calc(50% - 50px) 0/100px 100%,
+  background-image: linear-gradient(0deg, #0d1213, #2f6a7f 53%, #10b5cb, transparent);
+  --mask:
+  	radial-gradient(55.9px at 50% 75px, #000 99%, #0000 101%) calc(50% - 50px) 0/100px 100%,
   	radial-gradient(55.9px at 50% -50px, #0000 99%, #000 101%) 50% 25px/100px 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
@@ -336,7 +339,16 @@ footer .container .newsletter .newsletter-form input#email {
   width: 100%;
   min-width: 150px;
 }
+footer .container .newsletter .newsletter-form input#email::-webkit-input-placeholder {
+  color: white;
+}
 footer .container .newsletter .newsletter-form input#email::-moz-placeholder {
+  color: white;
+}
+footer .container .newsletter .newsletter-form input#email:-ms-input-placeholder {
+  color: white;
+}
+footer .container .newsletter .newsletter-form input#email::-ms-input-placeholder {
   color: white;
 }
 footer .container .newsletter .newsletter-form input#email::placeholder {
@@ -398,6 +410,7 @@ footer .container .info-wrapper .footer-about a {
   display: flex;
   align-items: center;
   gap: 1em;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -521,13 +534,6 @@ main .banner {
   align-items: flex-end;
   min-height: 300px;
 }
-main .banner .title {
-  padding-inline: 7em;
-  max-width: clamp(1600px, 84%, 100%);
-  margin-inline: auto;
-  margin-bottom: 6em;
-  width: 100%;
-}
 @media all and (max-width: 768px) {
   main .banner .title {
     padding-inline: 4em;
@@ -537,6 +543,13 @@ main .banner .title {
   main .banner .title {
     padding-inline: 2em;
   }
+}
+main .banner .title {
+  padding-inline: 7em;
+  max-width: clamp(1600px, 84%, 100%);
+  margin-inline: auto;
+  margin-bottom: 6em;
+  width: 100%;
 }
 main .banner .title h1 {
   font-size: 3rem;
@@ -605,6 +618,7 @@ main .container {
 main .container .info-circuit {
   display: flex;
   grid-column: 1/span 1;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   justify-content: space-between;
@@ -657,6 +671,7 @@ main .container .info-circuit li svg {
   transform: scale(1.49);
 }
 main .container .info-circuit li p {
+  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   font-weight: 600;
@@ -928,9 +943,10 @@ main .container .sidebar form {
   flex-direction: column;
   padding: 2em 1.5em;
   background-color: rgba(229, 232, 235, 0.6);
-  border: 5px solid #6993a3;
+  border: 3px solid #6993a3;
   gap: 1em;
   border-radius: 9px;
+  position: -webkit-sticky;
   position: sticky;
   top: 8em;
 }
@@ -1037,4 +1053,6 @@ main .container .sidebar form .form-group a {
     padding-block: 1.1em;
     line-height: 18.4px;
   }
-}/*# sourceMappingURL=product.css.map */
+}
+
+/*# sourceMappingURL=product.css.map */

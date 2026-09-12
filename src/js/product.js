@@ -1,50 +1,53 @@
 import data from "../data/data.js";
 
+function setCurrentYear(dateString) {
+	const currentYear = new Date().getFullYear();
+
+	return dateString.replace(/\d{4}$/, currentYear);
+}
+
 function getProduct() {
 	let para = new URLSearchParams(window.location.search);
 	let id = para.get("product_id");
 	let { products } = data;
 
-	return products[id - 1];
+	let product = products[id - 1];
+
+	product.date_departure = setCurrentYear(product.date_departure);
+	product.date_arrival = setCurrentYear(product.date_arrival);
+
+	return product;
 }
 
 function insertData() {
 	let product = getProduct();
 
-	let backgroundImage = (document.querySelector(
-		"main .banner"
-	).style.backgroundImage = `url(${product.main_image})`);
+	let backgroundImage = (document.querySelector("main .banner").style.backgroundImage = `url(${product.main_image})`);
 
-	let title = (document.querySelector(
-		"main .banner .title h1"
-	).textContent = `Calatorie spre ${product.location}`);
+	let title = (document.querySelector("main .banner .title h1").textContent = `Calatorie spre ${product.location}`);
 
-	let subtitle = (document.querySelector("main .banner .title h2").childNodes[2].textContent =
-		product.country);
+	let subtitle = (document.querySelector("main .banner .title h2").childNodes[2].textContent = product.country);
 
 	let info = document.querySelectorAll("main .container .info-circuit li p");
 
 	info[0].textContent = `${product.price} EURO`;
 	info[1].textContent = product.date_departure;
 	info[2].textContent = product.date_arrival;
-	info[3].textContent =
-		product.stop_overs == 1 ? `${product.stop_overs} Escala` : `${product.stop_overs} Escale`;
+	info[3].textContent = product.stop_overs == 1 ? `${product.stop_overs} Escala` : `${product.stop_overs} Escale`;
 	info[4].textContent = `${product.days} zile`;
 	info[5].textContent = product.airport;
 
-	let description = (document.querySelector(
-		"main .container .main-col .product-description p"
-	).textContent = product.description);
+	let description = (document.querySelector("main .container .main-col .product-description p").textContent =
+		product.description);
 
-	let objectives = (document.querySelector(
-		"main .container .main-col .objectives ul"
-	).innerHTML = `${product.objectives.map((obj) => `<li>${obj}</li>`).join("")}`);
+	let objectives = (document.querySelector("main .container .main-col .objectives ul").innerHTML =
+		`${product.objectives.map((obj) => `<li>${obj}</li>`).join("")}`);
 
 	let schedule = document.querySelector("main .container .main-col .schedule ul");
 
 	let dates = getDatesInRange(
 		new Date(product.date_departure.split(".").reverse().join(".")),
-		new Date(product.date_arrival.split(".").reverse().join("."))
+		new Date(product.date_arrival.split(".").reverse().join(".")),
 	);
 
 	dates.forEach((date, i) => {

@@ -186,7 +186,9 @@ main {
 				.slides-wrapper {
 					display: flex;
 					overflow: hidden;
-					box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+					box-shadow:
+						0 1px 3px 0 rgb(0 0 0 / 20%),
+						0 6px 20px 0 rgb(0 0 0 / 19%);
 					min-height: 450px;
 
 					.slide {
@@ -478,7 +480,7 @@ main {
 				flex-direction: column;
 				padding: 2em 1.5em;
 				background-color: rgb(229 232 235 / 60%);
-				border: 5px solid #6993a3;
+				border: 3px solid #6993a3;
 				gap: 1em;
 				border-radius: 9px;
 				position: -webkit-sticky;

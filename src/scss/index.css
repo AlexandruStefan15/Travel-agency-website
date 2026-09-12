@@ -72,6 +72,14 @@ section {
   }
 }
 /* boilerplate-end */
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .pulse {
   animation-name: pulse;
   animation-duration: 1s;
@@ -81,14 +89,6 @@ section {
   animation-direction: normal;
   animation-fill-mode: none;
   animation-play-state: running;
-}
-@keyframes pulse {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }
 
 /* animation (pulse 1s ease 0s infinite normal forwards paused)  */
@@ -168,6 +168,7 @@ header nav .nav-menu li:last-of-type a {
 @media all and (max-width: 1279.5px) {
   header nav .nav-menu li:last-of-type a {
     padding: 0.7em 2em;
+    max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin: 0 auto;
@@ -264,7 +265,9 @@ footer {
   background-position: center;
   background-blend-mode: overlay;
   background-attachment: fixed;
-  --mask: radial-gradient(55.9px at 50% 75px, #000 99%, #0000 101%) calc(50% - 50px) 0/100px 100%,
+  background-image: linear-gradient(0deg, #0d1213, #2f6a7f 53%, #10b5cb, transparent);
+  --mask:
+  	radial-gradient(55.9px at 50% 75px, #000 99%, #0000 101%) calc(50% - 50px) 0/100px 100%,
   	radial-gradient(55.9px at 50% -50px, #0000 99%, #000 101%) 50% 25px/100px 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
@@ -336,7 +339,16 @@ footer .container .newsletter .newsletter-form input#email {
   width: 100%;
   min-width: 150px;
 }
+footer .container .newsletter .newsletter-form input#email::-webkit-input-placeholder {
+  color: white;
+}
 footer .container .newsletter .newsletter-form input#email::-moz-placeholder {
+  color: white;
+}
+footer .container .newsletter .newsletter-form input#email:-ms-input-placeholder {
+  color: white;
+}
+footer .container .newsletter .newsletter-form input#email::-ms-input-placeholder {
   color: white;
 }
 footer .container .newsletter .newsletter-form input#email::placeholder {
@@ -398,6 +410,7 @@ footer .container .info-wrapper .footer-about a {
   display: flex;
   align-items: center;
   gap: 1em;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -593,6 +606,7 @@ main section.fullscreen-banner .info-banner h1 {
 }
 main section.fullscreen-banner .info-banner h1 span {
   text-decoration: underline;
+  -webkit-text-decoration-color: var(--secondary);
   text-decoration-color: var(--secondary);
 }
 main section.fullscreen-banner .info-banner form {
@@ -761,8 +775,10 @@ main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-
 }
 main section.fullscreen-banner .info-banner form .form-item:last-of-type .price-slider .range-slider input {
   padding: 0;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  cursor: -webkit-grab;
   cursor: grab;
   position: absolute;
   top: -5.4px;
@@ -842,6 +858,7 @@ main section.fullscreen-banner .info-banner form button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.3em 2.2em;
@@ -920,6 +937,7 @@ main section.products .container .product-list:has(> *:first-child:nth-last-chil
 main section.products .container .product-list .product-card {
   box-shadow: 0px 2px 9.5px rgba(0, 0, 0, 0.5019607843);
   border-radius: 16px;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   transform: scale(0);
@@ -955,7 +973,7 @@ main section.products .container .product-list .product-card .card-header a {
   display: block;
 }
 main section.products .container .product-list .product-card .card-header a img {
-  height: 238px;
+  aspect-ratio: 1.9/1;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -1076,6 +1094,7 @@ main section.products .container .product-list .product-card .card-footer a svg 
 }
 main section.products .container .see-more {
   text-align: center;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
@@ -1095,4 +1114,6 @@ main section.products .container .see-more button.visible {
 }
 main section.products .container .see-more button.hide {
   display: none;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */

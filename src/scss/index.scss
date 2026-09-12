@@ -484,7 +484,7 @@ main {
 							display: block;
 
 							img {
-								height: 238px;
+								aspect-ratio: 1.9 / 1;
 								width: 100%;
 								-o-object-fit: cover;
 								object-fit: cover;
